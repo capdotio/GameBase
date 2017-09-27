@@ -1,9 +1,11 @@
 #pragma once
 
+class SceneManager;
+
 class BaseScene
 {
 public:
 	virtual void Init() {};
-	virtual void Update() = 0;
-	virtual void Draw() = 0;
+	virtual void Update(SceneManager& mng) = 0;
+	virtual void Render(SceneManager& mng) const = 0;
 };

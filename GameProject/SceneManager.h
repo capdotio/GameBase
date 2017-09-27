@@ -1,20 +1,26 @@
 #pragma once
 #include"BaseScene.h"
+#include<memory>
 
 class SceneManager
 {
 public:
-	enum SCENE {
-		TITLE,
-		GAME,
-		RESULT,
-		CONFIG
-	};
-	static void ChangeScene(SCENE scene);
-	static void Update();
-	static void Render();
+	void Render() {
+		if (scn) {
+			scn->Render(*this);
+		}
+	}
 
-	SceneManager();
+	void Update() {
+		if (scn) {
+			scn->Update(*this);
+		}
+	}
+
+	void ChangeScene(std::shared_ptr<BaseScene> scene) {
+		scn = scene;
+	}
+
 private:
-	static BaseScene* m_scene;
+	std::shared_ptr<BaseScene> scn;
 };

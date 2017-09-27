@@ -162,8 +162,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="ConfigScene.cpp" />
+    <ClCompile Include="GameScene.cpp" />
     <ClCompile Include="Main.cpp" />
-    <ClCompile Include="SceneManager.cpp" />
+    <ClCompile Include="ResultScene.cpp" />
+    <ClCompile Include="TitleScene.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="Resource.rc" />
@@ -279,7 +282,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BaseScene.h" />
+    <ClInclude Include="ConfigScene.h" />
+    <ClInclude Include="GameScene.h" />
+    <ClInclude Include="ResultScene.h" />
     <ClInclude Include="SceneManager.h" />
+    <ClInclude Include="TitleScene.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

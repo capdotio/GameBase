@@ -1,14 +1,16 @@
 ﻿
-# include <Siv3D.hpp>
+#include <Siv3D.hpp>
+#include "SceneManager.h"
+#include "TitleScene.h"
 
 void Main()
 {
-	const Font font(30);
+	SceneManager mng;
+	mng.ChangeScene(std::shared_ptr<BaseScene>(new TitleScene()));
 
 	while (System::Update())
 	{
-		font(L"ようこそ、Siv3D の世界へ！").draw();
-
-		Circle(Mouse::Pos(), 50).draw({ 255, 0, 0, 127 });
+		mng.Update();
+		mng.Render();
 	}
 }
