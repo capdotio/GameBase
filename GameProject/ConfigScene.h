@@ -1,22 +1,14 @@
 #pragma once
-
+#include"BaseScene.h"
 
 class ConfigScene:public BaseScene
 {
 public:
 	ConfigScene();
-	void Update() {};
-	void Render() {};
+	void Update(SceneManager& mng)override {};
+	void Render(SceneManager& mng)const override {};
 	~ConfigScene();
 
 private:
 
 };
-
-ConfigScene::ConfigScene()
-{
-}
-
-ConfigScene::~ConfigScene()
-{
-}

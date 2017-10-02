@@ -4,18 +4,10 @@ class GameScene:public BaseScene
 {
 public:
 	GameScene();
-	void Update() {};
-	void Render() {};
+	void Update(SceneManager& mng)override {};
+	void Render(SceneManager& mng)const override {};
 	~GameScene();
 
 private:
 
 };
-
-GameScene::GameScene()
-{
-}
-
-GameScene::~GameScene()
-{
-}
